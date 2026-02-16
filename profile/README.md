@@ -39,10 +39,3 @@ Mache aligns structured data (JSON, YAML, Source Code) with OS primitives. It tr
 * **Topology Schemas:** Formalizing the mapping between graph data and tree-based filesystems.
 * **Agentic Research Template (ART):** Standardizing the structure of automated research workflows.
 
-```
-
-### Key Changes Made:
-1.  **Switched to HTML Anchor:** Replaced `[Mache...](url)` with `<a href="...">Mache...</a>`. This forces the link to render even inside the bold/summary tags.
-2.  **Added `<br>`:** I added a small `<br>` after the summary closing tag to ensure the content inside the dropdown has a little breathing room from the header (optional, but looks cleaner on GitHub).
-
-```
