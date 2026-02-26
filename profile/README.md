@@ -33,9 +33,26 @@ Mache aligns structured data (JSON, YAML, Source Code) with OS primitives. It tr
 
 </details>
 
+<details open>
+<summary><b>
+<a href="https://github.com/agentic-research/x-ray">X-Ray 🩻</a>
+</b></summary>
+
+**Voice-Driven Browser Agent OS**
+
+X-Ray applies the principle of structural alignment to the live web. It projects chaotic, dynamic web pages (SPAs, Shadow DOMs, Canvas) into a deterministic semantic filesystem for agents to navigate, proving that *topology is the missing half of semantics*.
+
+* **Topology over HTML:** Uses multimodal vision (The Cartographer) to map visual layouts into a deterministic VFS, eliminating the need for agents to guess CSS selectors or parse minified HTML.
+* **Talker/Doer Swarm:** Decouples voice conversation (always listening) from background execution (POSIX traversal), ensuring fluid, real-time UX without awkward execution silences.
+* **Canvas Blindspot Detection:** Employs pure-Go edge detection to identify and interact with UI regions inside opaque `<canvas>` or WebGL elements.
+* **Powered by Mache:** Utilizes the Mache engine to let agents browse the web using standard filesystem commands (`ls`, `cat`, `act`).
+
+*(Note: Developed for the Gemini Live Agent Challenge. Source code is currently closed/private.)*
+
+</details>
+
 ## 🔬 Focus Areas
 
 * **AST-Native Developer Tools:** Making source code navigable for agents via Tree-sitter.
 * **Topology Schemas:** Formalizing the mapping between graph data and tree-based filesystems.
 * **Agentic Research Template (ART):** Standardizing the structure of automated research workflows.
-
