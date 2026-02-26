@@ -19,7 +19,7 @@ The primary objective is establishing **structural alignment** between raw data 
 
 <details open>
 <summary><b>
-<a href="https://github.com/agentic-research/mache">Mache 🗂️</a>
+<a href="https://github.com/agentic-research/mache">🗂️ Mache</a>
 </b></summary>
 
 **The Universal Graph-Native Overlay Engine**
@@ -33,9 +33,28 @@ Mache aligns structured data (JSON, YAML, Source Code) with OS primitives. It tr
 
 </details>
 
+
 <details open>
 <summary><b>
-<a href="https://github.com/agentic-research/x-ray">X-Ray 🩻</a>
+<a href="https://github.com/agentic-research/ley-line">⚡ Leyline</a>
+</b></summary>
+
+**High-Performance Agent Transport & Integrity Layer**
+
+If Mache is the filesystem, Leyline is the nervous system. Written in Rust, Leyline is the underlying infrastructure that exposes Agent-Computer Interfaces securely and efficiently.
+
+* **Unix Domain Sockets:** Exposes the virtual filesystem via high-speed IPC, bypassing network overhead for local agent swarms.
+* **Data Integrity:** Utilizes advanced FS/Unix primitives and Fountain Codes (RaptorQ) to ensure zero data corruption during high-throughput agent state syncs.
+* **Custom Memory Arena:** Built to bypass kernel overhead, allowing agents to read and write to the Mache graph at blistering speeds.
+
+*(Note: Leyline is currently core infrastructure and is closed-source.)*
+
+</details>
+
+
+<details open>
+<summary><b>
+<a href="https://github.com/agentic-research/x-ray">🩻 X-Ray</a>
 </b></summary>
 
 **Voice-Driven Browser Agent OS**
@@ -50,6 +69,7 @@ X-Ray applies the principle of structural alignment to the live web. It projects
 *(Note: Developed for the Gemini Live Agent Challenge. Source code is currently closed/private.)*
 
 </details>
+
 
 ## 🔬 Focus Areas
 
