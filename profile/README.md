@@ -6,9 +6,10 @@ Methodologies, tools, and implementations for high-order human-AI collaborative 
 
 ```mermaid
 graph TD
-    Data[(Raw Data)] <--> Mache(Structural Alignment) <--> Agent[Agentic Reasoning]
+    Data[(Raw Data)] <--> Leyline(Arena + Transport) <--> Mache(Structural Alignment)
+    Mache <-->|MCP| Agent[Agentic Reasoning]
     Mache -.-> Human[Human Discernible Output]
-
+    Leyline & Mache -->|C FFI| Kiln(Single Binary)
 ```
 
 ## 📡 Mission
@@ -48,6 +49,23 @@ If Mache is the filesystem, Leyline is the nervous system. Written in Rust, Leyl
 * **Custom Memory Arena:** Built to bypass kernel overhead, allowing agents to read and write to the Mache graph at blistering speeds.
 
 *(Note: Leyline is currently core infrastructure and is closed-source.)*
+
+</details>
+
+
+<details open>
+<summary><b>
+<a href="https://github.com/agentic-research/kiln">🔥 Kiln</a>
+</b></summary>
+
+**Where You Fire a Mache**
+
+Kiln packages Mache (Go) and Leyline (Rust) into a single fat binary or distroless OCI image. One command gives you a fully wired MCP server backed by Leyline's zero-copy arena.
+
+* **Fat Binary:** Go statically links Leyline's Rust `.a` via CGO — 32MB, no runtime deps.
+* **Streamable HTTP:** Default MCP transport on `:7532` with stateful sessions. Plug into Claude Code, Cursor, or any MCP client.
+* **Distroless Images:** Reproducible OCI images via melange + apko (~15MB, no shell).
+* **Homebrew:** `brew install agentic-research/tap/kiln && brew services start kiln`
 
 </details>
 
