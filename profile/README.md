@@ -10,6 +10,9 @@ graph TD
     Mache <-->|MCP| Agent[Agentic Reasoning]
     Mache -.-> Human[Human Discernible Output]
     Leyline & Mache -->|C FFI| Kiln(Single Binary)
+    Agent <-->|beads| Rosary(Work Orchestration)
+    Rosary -->|dispatch| Agent
+    Rosary -.->|federation| Wasteland[Wasteland]
 ```
 
 ## 📡 Mission
@@ -85,6 +88,25 @@ X-Ray applies the principle of structural alignment to the live web. It projects
 * **Powered by Mache:** Utilizes the Mache engine to let agents browse the web using standard filesystem commands (`ls`, `cat`, `act`).
 
 *(Note: Developed for the Gemini Live Agent Challenge. Source code is currently closed/private.)*
+
+</details>
+
+
+<details open>
+<summary><b>
+<a href="https://github.com/agentic-research/rosary">📿 Rosary</a>
+</b></summary>
+
+**Autonomous Work Orchestrator**
+
+Rosary finds work across your repos, dispatches AI agents to do it, and verifies the results. It scans for open issues (stored as "beads" in each repo's local Dolt database), triages by priority, hands tasks to Claude Code agents, and runs a 5-tier verification pipeline.
+
+* **Cross-Repo Coordination:** Tracks work across multiple repos via external refs — "threads" that string beads together.
+* **Selective Field Encryption:** The `rosary-crypto` crate encrypts private fields (ChaCha20-Poly1305) while leaving public metadata in cleartext, enabling safe federation.
+* **Wasteland Federation:** Publishes public beads to the [Wasteland](https://github.com/steveyegge/gastown) wanted board — the distributed work marketplace for agentic rigs.
+* **MCP Server:** Exposes 8 tools over stdio for integration with Claude Code and other MCP clients.
+
+*(Note: Currently private. Open-sourcing is in progress.)*
 
 </details>
 
