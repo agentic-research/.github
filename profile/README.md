@@ -191,10 +191,10 @@ Compare and validate grype-compatible vulnerability databases. Useful for verify
 
 | Subdomain | Service | Status |
 | --- | --- | --- |
-| [`rosary.bot`](https://rosary.bot) | Hosted rosary — agent dispatch + bead management | Coming soon |
-| [`mcp.rosary.bot`](https://mcp.rosary.bot) | Rosary MCP endpoint (Streamable HTTP) | Coming soon |
-| [`mache.rosary.bot`](https://mache.rosary.bot) | Hosted mache MCP — structural code intelligence | Coming soon |
-| [`auth.rosary.bot`](https://auth.rosary.bot) | Signet identity service — proof-of-possession auth | Coming soon |
+| [`rosary.bot`](https://rosary.bot) | Hosted rosary — agent dispatch + bead management | Live |
+| [`mcp.rosary.bot`](https://mcp.rosary.bot) | Rosary MCP endpoint (Streamable HTTP) | Live |
+| [`mache.rosary.bot`](https://mache.rosary.bot) | Hosted mache MCP — structural code intelligence | Live |
+| [`auth.rosary.bot`](https://auth.rosary.bot) | Signet identity service — proof-of-possession auth | Live |
 
 ## 🔬 Focus Areas
 
