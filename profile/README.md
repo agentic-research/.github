@@ -6,10 +6,12 @@ Tools and infrastructure for human-AI collaborative research.
 
 ### Core
 
+**[mache](https://github.com/agentic-research/mache)** — Structural code intelligence engine. Mache treats source code as a graph, not text — mounting it as a navigable filesystem backed by SQL. Tree-sitter parsing, community detection, caller/callee tracing, impact analysis. Ships as an MCP server with 15+ tools or a FUSE mount for `cd`/`ls`/`cat` traversal. Used by agents to understand codebases the way a staff engineer would: by structure, not by grep.
+
+**[signet](https://github.com/agentic-research/signet)** — Proof-of-possession identity that replaces bearer tokens with cryptographic proof. Ephemeral X.509 certificates (5-minute TTL), Ed25519 + ML-DSA-44 (post-quantum ready), OS keyring storage. Signs git commits, authenticates HTTP requests, and bridges GHA OIDC tokens to short-lived certs — all offline-capable, no network required for key operations.
+
 | Repo | What |
 |------|------|
-| [mache](https://github.com/agentic-research/mache) | Structural code intelligence — graph-native overlay for source code. MCP server, FUSE filesystem, SQL-powered traversal. |
-| [signet](https://github.com/agentic-research/signet) | Proof-of-possession identity — ephemeral X.509 certs, Ed25519, OS keyring storage. |
 | [kiln](https://github.com/agentic-research/kiln) | Single binary packaging for mache + leyline. Homebrew, distroless OCI images. |
 | [x-ray](https://github.com/agentic-research/x-ray) | Voice-driven browser agent — topology-based web navigation for agents. |
 
