@@ -18,15 +18,12 @@ Tools for working with code and agents. Mostly experimental — take what's usef
 
 **[rosary](https://github.com/agentic-research/rosary)** — Cross-repo work orchestrator. Tracks atoms of work as "beads" (Dolt-backed SQL in each repo), dispatches Claude/Gemini agents in isolated worktrees, syncs to Linear for human review.
 
-**[Moonwalk](https://github.com/agentic-research/Moonwalk)** — macOS desktop assistant. Glass-pill overlay, voice or text, controls your Mac via Accessibility APIs and AppleScript.
-
 **[x-ray](https://github.com/agentic-research/x-ray)** — Voice-driven browser agent. Topology-based web navigation — projects pages into a deterministic VFS instead of guessing CSS selectors.
 
 ## Libraries & tooling
 
 | Repo | What |
 |------|------|
-| [kiln](https://github.com/agentic-research/kiln) | Single-binary packaging for mache + ley-line. Homebrew, distroless OCI. |
 | [go-cms](https://github.com/agentic-research/go-cms) | CMS/PKCS#7 for Go with Ed25519. |
 | [go-platform-signers](https://github.com/agentic-research/go-platform-signers) | `crypto.Signer` — macOS Keychain, Linux PKCS#11. |
 | [smelt](https://github.com/agentic-research/smelt) | Compare and validate Grype-compatible vulnerability databases. |
