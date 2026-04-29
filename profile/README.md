@@ -1,34 +1,32 @@
 # Agentic Research
 
-Tools and infrastructure for human-AI collaborative research.
+Tools for working with code and agents. Mostly experimental — take what's useful.
 
-## Projects
+## Code intelligence
 
-### Core
+**[mache](https://github.com/agentic-research/mache)** — Treats source code as a graph instead of text. Tree-sitter parsing, community detection, caller/callee tracing, impact analysis. Mounts as a filesystem (`cd`, `ls`, `cat`) or serves MCP with 15+ tools.
 
-**[mache](https://github.com/agentic-research/mache)** — Structural code intelligence engine. Mache treats source code as a graph, not text — mounting it as a navigable filesystem backed by SQL. Tree-sitter parsing, community detection, caller/callee tracing, impact analysis. Ships as an MCP server with 15+ tools or a FUSE mount for `cd`/`ls`/`cat` traversal. Used by agents to understand codebases the way a staff engineer would: by structure, not by grep.
+**[ley-line-open](https://github.com/agentic-research/ley-line-open)** — Open-source data plane primitives. Arena-backed SQLite graph (zero-copy), tree-sitter AST projection with bidirectional splice, LSP client. Powers mache's enriched tools (LSP type info, semantic search) and ships a C FFI for embedding.
 
-**[signet](https://github.com/agentic-research/signet)** — Proof-of-possession identity that replaces bearer tokens with cryptographic proof. Ephemeral X.509 certificates (5-minute TTL), Ed25519 + ML-DSA-44 (post-quantum ready), OS keyring storage. Signs git commits, authenticates HTTP requests, and bridges GHA OIDC tokens to short-lived certs — all offline-capable, no network required for key operations.
+## Identity
+
+**[signet](https://github.com/agentic-research/signet)** — Proof-of-possession identity that replaces bearer tokens with cryptographic proof. Ephemeral X.509 certs (5-min TTL), Ed25519 + ML-DSA-44 (post-quantum ready), OS keyring. Signs git commits, authenticates HTTP, bridges GHA OIDC to short-lived certs — all offline-capable.
+
+**[notme](https://github.com/agentic-research/notme)** — Self-sovereign identity for agents. Cap'n Proto schemas, Cloudflare Worker authority, ley-line-sign WASM. Demo at [notme.bot](https://notme.bot).
+
+## Agents
+
+**[rosary](https://github.com/agentic-research/rosary)** — Cross-repo work orchestrator. Tracks atoms of work as "beads" (Dolt-backed SQL in each repo), dispatches Claude/Gemini agents in isolated worktrees, syncs to Linear for human review.
+
+**[Moonwalk](https://github.com/agentic-research/Moonwalk)** — macOS desktop assistant. Glass-pill overlay, voice or text, controls your Mac via Accessibility APIs and AppleScript.
+
+**[x-ray](https://github.com/agentic-research/x-ray)** — Voice-driven browser agent. Topology-based web navigation — projects pages into a deterministic VFS instead of guessing CSS selectors.
+
+## Libraries & tooling
 
 | Repo | What |
 |------|------|
-| [kiln](https://github.com/agentic-research/kiln) | Single binary packaging for mache + leyline. Homebrew, distroless OCI images. |
-| [x-ray](https://github.com/agentic-research/x-ray) | Voice-driven browser agent — topology-based web navigation for agents. |
-
-### Supply Chain
-
-| Repo | What |
-|------|------|
-| [venturi](https://github.com/agentic-research/venturi) | High-velocity vulnerability ingestion from NVD, GHSA, Wolfi. |
-| [smelt](https://github.com/agentic-research/smelt) | Vulnerability DB comparison and validation. |
-
-### Libraries
-
-| Repo | What |
-|------|------|
-| [go-cms](https://github.com/agentic-research/go-cms) | CMS/PKCS#7 for Go with Ed25519 support. |
-| [go-platform-signers](https://github.com/agentic-research/go-platform-signers) | Platform-native `crypto.Signer` — macOS Keychain, Linux PKCS#11. |
-
-### Identity
-
-[notme.bot](https://notme.bot) — identity platform. Passkey auth, Ed25519 CA, epoch-based cert rotation.
+| [kiln](https://github.com/agentic-research/kiln) | Single-binary packaging for mache + ley-line. Homebrew, distroless OCI. |
+| [go-cms](https://github.com/agentic-research/go-cms) | CMS/PKCS#7 for Go with Ed25519. |
+| [go-platform-signers](https://github.com/agentic-research/go-platform-signers) | `crypto.Signer` — macOS Keychain, Linux PKCS#11. |
+| [smelt](https://github.com/agentic-research/smelt) | Compare and validate Grype-compatible vulnerability databases. |
